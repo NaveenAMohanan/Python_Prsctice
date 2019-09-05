@@ -1,0 +1,14 @@
+from tqdm import tqdm
+from time import sleep
+def loop_test():
+    while True:
+        try:
+            for i in tqdm(range(0,60*20),desc='Min remaining loop'):
+                sleep(1)
+        except KeyboardInterrupt:
+            print('grace fully exit ')
+            #do whatevrer needs to be done in order to close and completely shut down the pgm 
+            break
+
+if __name__ == '__main__':
+    loop_test()
